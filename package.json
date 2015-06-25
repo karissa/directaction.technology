@@ -22,7 +22,7 @@
   "gh-pages-deploy": {
     "cname": "directaction.technology",
     "prep": [
-      "bundle",
+      "bundle"
     ],
     "noprompt": false
   },
