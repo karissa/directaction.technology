@@ -1,0 +1,31 @@
+{
+  "name": "directaction.technology",
+  "version": "1.0.0",
+  "description": "directaction.technology",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify -t brfs index.js -o bundle.js",
+    "server": "nodemon --exec http-server -e js,css,html",
+    "start": "npm run watch & npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karissa/directaction.technology.git"
+  },
+  "author": "Karissa McKelvey <karissa@karissamck.com> (http://karissamck.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karissa/directaction.technology/issues"
+  },
+  "homepage": "https://github.com/karissa/directaction.technology",
+  "dependencies": {
+    "brfs": "^1.4.0"
+  },
+  "devDependencies": {
+    "a-simple-templater": "^1.0.7",
+    "browserify": "^10.2.4",
+    "handlebars": "^3.0.3",
+    "nodemon": "^1.3.7",
+    "watchify": "^3.2.3"
+  }
+}
