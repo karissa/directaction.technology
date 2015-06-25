@@ -2,13 +2,11 @@ var fs = require('fs')
 
 module.exports = [
   {
-    id: 1,
-    author: "Karissa McKelvey",
-    text: fs.readFileSync("posts/testpost.html").toString()
+    id: 'free-as-in-freedom',
+    text: fs.readFileSync("./posts/freeasinfreedom.html").toString()
   },
   {
-    id: 2,
-    author: "Karissa McKelvey",
-    text: fs.readFileSync("posts/testpost.html").toString()
+    id: 'test-post',
+    text: fs.readFileSync("./posts/testpost.html").toString()
   }
 ]
