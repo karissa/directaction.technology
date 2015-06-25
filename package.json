@@ -6,7 +6,9 @@
   "scripts": {
     "watch": "watchify -t brfs index.js -o bundle.js",
     "server": "nodemon --exec http-server -e js,css,html",
-    "start": "npm run watch & npm run server"
+    "bundle": "browserify -t brfs index.js -o bundle.js",
+    "start": "npm run watch & npm run server",
+    "deploy": "gh-pages-deploy"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,17 @@
   "bugs": {
     "url": "https://github.com/karissa/directaction.technology/issues"
   },
+  "gh-pages-deploy": {
+    "cname": "directaction.technology",
+    "prep": [
+      "bundle",
+    ],
+    "noprompt": false
+  },
   "homepage": "https://github.com/karissa/directaction.technology",
   "dependencies": {
-    "brfs": "^1.4.0"
+    "brfs": "^1.4.0",
+    "gh-pages-deploy": "^0.3.0"
   },
   "devDependencies": {
     "a-simple-templater": "^1.0.7",
